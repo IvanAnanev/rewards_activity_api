@@ -13,7 +13,8 @@ defmodule ActivityApi.Application do
             port: Application.get_env(:activity_api, :port, 4000),
             dispatch: dispatch()
           ]
-        )
+        ),
+        ActivityApi.Repo
       ],
       strategy: :one_for_one,
       name: Server.Application

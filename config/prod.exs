@@ -8,3 +8,5 @@ port =
 
 config :activity_api,
   port: port
+
+import_config "prod.secret.exs"
