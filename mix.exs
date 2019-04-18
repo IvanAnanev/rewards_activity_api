@@ -15,7 +15,7 @@ defmodule ActivityApi.MixProject do
 
   def application do
     [
-      extra_applications: [:logger, :runtime_tools],
+      extra_applications: [:logger, :runtime_tools, :timex],
       mod: {ActivityApi.Application, []}
     ]
   end
@@ -27,7 +27,10 @@ defmodule ActivityApi.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
       {:ecto_sql, "~> 3.0"},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:hackney, "1.15.1"},
+      {:jason, "~> 1.1"},
+      {:timex, "~> 3.1"}
     ]
   end
 
