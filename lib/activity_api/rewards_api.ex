@@ -26,19 +26,6 @@ defmodule ActivityApi.RewardsApi do
     end
   end
 
-  # @user_tokens "api/v1/user/tokens"
-  # def user_tokens(email, password) do
-  #   payload = Jason.encode! %{data: %{type: "user-token-requests", attributes: %{email:  email, password: password}}}
-  #   {:ok, _, _, client_ref} = :hackney.post(
-  #     rewards_url() <> @user_tokens,
-  #     @headers,
-  #     payload,
-  #     @opts
-  #   )
-  #   {:ok, body} = :hackney.body(client_ref)
-  #   Jason.decode!(body, keys: :atoms)
-  # end
-
   @user_profile "api/v1/user/profile"
   def user_profile(user_token) do
     case :hackney.get(
@@ -65,14 +52,6 @@ defmodule ActivityApi.RewardsApi do
   @bot_bonuses "api/v1/bot/bonuses"
   def bot_bonuses(bot_token, bonus_text) do
     payload = Jason.encode! %{data: %{type: "bonus-texts", attributes: %{text: bonus_text}}}
-    # {:ok, _, _, client_ref} = :hackney.post(
-    #   rewards_url() <> @bot_bonuses,
-    #   [{"Authorization", "Bearer #{bot_token}"}|@headers],
-    #   payload,
-    #   @opts
-    # )
-    # {:ok, body} = :hackney.body(client_ref)
-    # Jason.decode!(body, keys: :atoms)
     case :hackney.post(
       rewards_url() <> @bot_bonuses,
       [{"Authorization", "Bearer #{bot_token}"}|@headers],
