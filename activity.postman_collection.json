@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "730d841a-ac78-49f4-aa24-1b8c4fbf155d",
+		"name": "activity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://gentle-gorge-22243.herokuapp.com/ping",
+					"protocol": "https",
+					"host": [
+						"gentle-gorge-22243",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activity_requirements",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTY2MDY0NTksInN1YiI6NzcsInR5cGUiOiJhY2Nlc3MifQ.q9sRf0T6Zf4mH0f2PLeMJnPyGQyUatFiqzqYfbVcOEk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://gentle-gorge-22243.herokuapp.com//activity_requirements",
+					"protocol": "https",
+					"host": [
+						"gentle-gorge-22243",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"",
+						"activity_requirements"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "activity_requirements",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://gentle-gorge-22243.herokuapp.com/activity_requirements",
+							"protocol": "https",
+							"host": [
+								"gentle-gorge-22243",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"activity_requirements"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "Content-Length",
+							"value": "322"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 13 May 2019 11:03:57 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Cowboy"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur"
+						}
+					],
+					"cookie": [],
+					"body": "{\"data\":[{\"attributes\":{\"goal\":200,\"has_claimed\":false,\"metric\":\"stand\"},\"id\":1,\"type\":\"activity_requirements\"},{\"attributes\":{\"goal\":200,\"has_claimed\":false,\"metric\":\"move\"},\"id\":2,\"type\":\"activity_requirements\"},{\"attributes\":{\"goal\":200,\"has_claimed\":false,\"metric\":\"excercise\"},\"id\":3,\"type\":\"activity_requirements\"}]}"
+				}
+			]
+		},
+		{
+			"name": "claim_bonus_points",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTc5ODc0OTAsInN1YiI6NzcsInR5cGUiOiJhY2Nlc3MifQ.5BJg7w29NWM5c0TfDGkkHuYz0LeJgNTipmNHKXsENWQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"metric\": \"move\",\n  \"value\": 200\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4001/claim_bonus_points",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"claim_bonus_points"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
