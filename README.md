@@ -75,3 +75,18 @@ response 200
   "data": "bonus for user some@email.com for goal some_metric was claimed"
 }
 ```
+
+## Postman export
+
+- [postman_export_file](activity.postman_collection.json)
+
+## Heroku deploy
+
+- [instruction_1](https://hexdocs.pm/phoenix/heroku.html)
+- [instruction_2](https://elixircasts.io/deploying-elixir-with-heroku)
+
+```bash
+git remote add heroku https://git.heroku.com/gentle-gorge-22243.git
+git push heroku master
+heroku run "POOL_SIZE=2 mix ecto.migrate"
+```

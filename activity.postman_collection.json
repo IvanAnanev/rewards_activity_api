@@ -40,7 +40,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTY2MDY0NTksInN1YiI6NzcsInR5cGUiOiJhY2Nlc3MifQ.q9sRf0T6Zf4mH0f2PLeMJnPyGQyUatFiqzqYfbVcOEk",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NTc5ODc0OTAsInN1YiI6NzcsInR5cGUiOiJhY2Nlc3MifQ.5BJg7w29NWM5c0TfDGkkHuYz0LeJgNTipmNHKXsENWQ",
 							"type": "string"
 						}
 					]
@@ -58,7 +58,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "https://gentle-gorge-22243.herokuapp.com//activity_requirements",
+					"raw": "https://gentle-gorge-22243.herokuapp.com/activity_requirements",
 					"protocol": "https",
 					"host": [
 						"gentle-gorge-22243",
@@ -66,7 +66,6 @@
 						"com"
 					],
 					"path": [
-						"",
 						"activity_requirements"
 					]
 				}
@@ -161,12 +160,13 @@
 					"raw": "{\n  \"metric\": \"move\",\n  \"value\": 200\n}"
 				},
 				"url": {
-					"raw": "http://localhost:4001/claim_bonus_points",
-					"protocol": "http",
+					"raw": "https://gentle-gorge-22243.herokuapp.com/claim_bonus_points",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"gentle-gorge-22243",
+						"herokuapp",
+						"com"
 					],
-					"port": "4001",
 					"path": [
 						"claim_bonus_points"
 					]
